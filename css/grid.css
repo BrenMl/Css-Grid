@@ -1,51 +1,23 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas:"header     header      header"
-                        "sidebar-1  contenido   sidebar-2"
-                        "sidebar-1  widgets     sidebar-2"
-                        "footer     footer      footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 100px 200px;
     gap: 20px;
-}
-.container .header {
-    background-color: coral;
-    grid-column: header;
-    /*grid-row: 2/4;
-    grid-column: 1/-1; 
-    or also
-    first param: grid-row-start
-    second param: grid-column-start
-    third param: grid-row-end
-    fourd param: grid-column-end
-    grid-area: 2 / 1 / 4 / -1;
-    --span-- 
-   
-    grid-column: 1/ span 4 ;
-    grid-row: 2 / span 1; */
+    /* tamaño que tendran las filas que se agregen automaticamente
+    o de manera implicita
+    */
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
 
-}
-.container .sidebar-1 {
-    background-color: darkseagreen;
-    grid-area: sidebar-1;
-}
-.container .contenido {
-    background-color: gainsboro;
-    color: black;
-    grid-area: contenido;
+    grid-auto-flow: dense;
 }
 
-.container .widgets {
-    background-color: brown;
-    grid-area: widgets;
+.container .span2 {
+    grid-column: span 2;
+    background-color: indianred;
 }
 
-.container .sidebar-2 {
-    background-color: darkkhaki;
-    grid-area: sidebar-2;
-}
-
-.container .footer {
-    background-color:hotpink;
-    grid-area: footer;
+.container .span3 {
+    grid-column: span 3;
+    background-color: khaki;
 }
