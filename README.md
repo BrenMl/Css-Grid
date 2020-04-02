@@ -1,7 +1,6 @@
 # Css-Grid
 A small web page using css grid
 
-Find all chapter outcomes over [here](https://github.com/the-road-to-learn-react/hackernews-client).
 * [Firts Steps](https://github.com/BrenMl/Css-Grid/tree/8f22748d223c85507248dc8d2a3f1d70db48386c)
 * [Function minmax()](https://github.com/BrenMl/Css-Grid/tree/86b1af70bde0350c25af7442c3b75b6150b5b165)
 * [Function repeat()](https://github.com/BrenMl/Css-Grid/tree/ce6a4f54815ff4ab52b6209a62e7edfcf96bf1b2)
