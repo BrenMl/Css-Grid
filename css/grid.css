@@ -1,11 +1,16 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows:repeat(4,1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:"header     header      header"
+                        "sidebar-1  contenido   sidebar-2"
+                        "sidebar-1  widgets     sidebar-2"
+                        "footer     footer      footer";
     gap: 20px;
 }
-.container .item {
+.container .header {
     background-color: coral;
+    grid-column: header;
     /*grid-row: 2/4;
     grid-column: 1/-1; 
     or also
@@ -15,8 +20,32 @@
     fourd param: grid-column-end
     grid-area: 2 / 1 / 4 / -1;
     --span-- 
-    */
+   
     grid-column: 1/ span 4 ;
-    grid-row: 2 / span 1;
+    grid-row: 2 / span 1; */
 
+}
+.container .sidebar-1 {
+    background-color: darkseagreen;
+    grid-area: sidebar-1;
+}
+.container .contenido {
+    background-color: gainsboro;
+    color: black;
+    grid-area: contenido;
+}
+
+.container .widgets {
+    background-color: brown;
+    grid-area: widgets;
+}
+
+.container .sidebar-2 {
+    background-color: darkkhaki;
+    grid-area: sidebar-2;
+}
+
+.container .footer {
+    background-color:hotpink;
+    grid-area: footer;
 }
